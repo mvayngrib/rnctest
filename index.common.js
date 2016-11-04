@@ -15,6 +15,8 @@ import {
 
 import crypto from 'crypto'
 const rand = crypto.randomBytes(32).toString('hex')
+const ecdh = crypto.createECDH('secp521r1')
+const publicKey = ecdh.generateKeys()
 
 export default class rnctest extends Component {
   render() {
